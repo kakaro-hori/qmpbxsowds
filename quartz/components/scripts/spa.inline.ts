@@ -132,10 +132,6 @@ async function _navigate(url: URL, isBack: boolean = false) {
 
 async function navigate(url: URL, isBack: boolean = false) {
   if (isNavigating) return
-  // Ensure trailing slash for directory-like paths (fixes relative URL resolution)
-  if (!url.pathname.endsWith("/") && !url.pathname.match(/\.[a-zA-Z0-9]+$/)) {
-    url.pathname += "/"
-  }
   isNavigating = true
   try {
     await _navigate(url, isBack)
