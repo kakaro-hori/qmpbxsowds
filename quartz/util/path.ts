@@ -247,7 +247,8 @@ export function transformLink(src: FullSlug, target: string, opts: TransformOpti
       // only match, just use it
       if (matchingFileNames.length === 1) {
         const targetSlug = matchingFileNames[0]
-        return (resolveRelative(src, targetSlug) + targetAnchor) as RelativeURL
+        const tail = isFolderPath(targetSlug) ? "/" : ""
+        return (resolveRelative(src, targetSlug) + tail + targetAnchor) as RelativeURL
       }
     }
 
