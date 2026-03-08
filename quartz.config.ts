@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "ja-JP",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "kakaro-hori.github.io/qmpbxsowds",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
